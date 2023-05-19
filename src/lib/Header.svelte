@@ -4,7 +4,7 @@
     $: dialogOpen = false;
 </script>
 
-<header class="bg-neutral-800 py-0.5 px-32 flex items-center justify-between">
+<header class="bg-neutral-800 py-0.5 px-32 flex items-center justify-between fixed top-0 w-full z-10 left-0 right-0" >
     <a href="/">
         <img src="/logo.png" alt="CacaoManga">
     </a>
