@@ -6,32 +6,11 @@
 
   let mangaP: any = null;
   onMount(async () => {
-    /*const {data, error} = await supabase.from('Chapter').select(`
-		name,
-		tom:tom_id (
-			name,
-			manga:manga_id (
-				name,
-				type,
-				img_url,
-        alter_title,
-        year,
-        description,
-        status
-			)
-		)
-		`).limit(1)
-		  if (error) {
-			console.log(error);
-		  }
-		  else {
-			mangaP = data[0];
-		  }
-	})*/
     const result = await supabase
       .from("Chapter")
       .select(
         `
+          img_url,
           name,
           tom:tom_id (
             id,
@@ -72,7 +51,7 @@
           alt=""
         />
         <button
-          class="text-white font-bold bg-purple-500 rounded-lg px-28 py-2 mt-6 ml-48"
+          class="text-white font-bold bg-purple-500 rounded-lg 2xl:px-28 xl:px-14 py-2 mt-6 ml-48 "
           >Читать</button
         >
       </div>
@@ -100,8 +79,7 @@
           class="flex rounded-lg bg-neutral-800 py-4 grid grid-cols-[11fr_1fr] mr-44"
         >
           <p class="text-white font-bold text-lg ml-4">
-            {mangaP.tom.name}
-            {mangaP.name}
+            <a href={"../chapter/" + mangaP.tom.manga.id}>{mangaP.tom.name} {mangaP.name}</a>
           </p>
           <p class="text-white font-bold text-lg">18.05.23</p>
         </div>

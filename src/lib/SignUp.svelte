@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import "../app.css";    
     import { createEventDispatcher } from "svelte"; 
     import { createClient } from '@supabase/supabase-js'
@@ -8,26 +8,27 @@
 	export const supabase = createClient(supabaseUrl, supabaseKey)
     export let open = false;
    
-    const dispatch = createEventDispatcher(); 
-   
-    let email = ""; 
-    let password = ""; 
-    let error = ""; 
-   
-    async function handleSubmit(event) { 
-      event.preventDefault(); 
-   
-      const { data, error: authError } = await supabase.auth.signInWithPassword({ 
-        email, 
-        password, 
-      }); 
-      if (authError) { 
-        error = authError.message; 
-      } else { 
-        dispatch("signin", data); 
-        window.location.href = '/' 
-      } 
-    }
+    const dispatch = createEventDispatcher();
+
+let email = "";
+let password = "";
+let error = "";
+
+async function handleSubmit(event) {
+  event.preventDefault();
+
+
+  const { data, error: authError } = await supabase.auth.signUp({
+    email,
+    password,
+  });
+
+  if (authError) {
+    error = authError.message;
+  } else {
+    dispatch("signup", data);
+  }
+}
 
 
 </script>
@@ -35,8 +36,8 @@
 <section class:hidden={!open} class="z-10 fixed left-0 top-0 bottom-0 right-0 bg-black/60">
 <article class:hidden={!open} class="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 p-6 grid gap-4 shadow-lg shadow-black bg-neutral-600 text-white font-bold rounded-lg">
     <form on:submit={handleSubmit}>
-        <div class="flex justify-between ml-16">
-            <p>Войти в аккаунт</p>
+        <div class="flex justify-between ml-12">
+            <p>Зарегистрироваться</p>
             <button on:click={() => {
                 open = !open;
             }}>X</button>
@@ -45,7 +46,7 @@
     <br>
     <input class="bg-neutral-500 h-12 rounded-xl px-4 py-2 mt-2" name="login" placeholder="Пароль" type="password" bind:value={password} required>
     <br>
-    <button class="flex p-1 shadow-lg bg-purple-500 text-white px-[105px] py-2 rounded-xl mt-4" type="submit">Войти</button>
+    <button class="flex p-1 shadow-lg bg-purple-500 text-white px-[50px] py-2 rounded-xl mt-4" type="submit">Зарегистрироваться</button>
 </form>
 </article>
 </section>

@@ -1,19 +1,6 @@
-<script>
+<script lang="ts">
 	import Header from '../lib/Header.svelte';
 	import "../app.css";
-	import { invalidate } from '$app/navigation';
-
-	import { onMount } from "svelte";
-
-	// onMount(() => {
-	// 	const { data } = supabase.auth.onAuthStateChange((event, _session) => {
-	// 		if (_session?.expires_at !== session?.expires_at) {
-	// 			invalidate('supabase:auth');
-	// 		}
-	// 	});
-
-	// 	return () => data.subscription.unsubscribe();
-	// });
 </script>
 
 
@@ -23,7 +10,6 @@
 	<slot />
 
 	<footer class="bg-neutral-800 py-0.5 px-32 flex items-center justify-between text-white">
-		<!-- <p>Offers can be discounted in <a href="https://vk.com/shio_mi">VK</a> developer</p> -->
 		<div class="grid grid-rows-3 grid-flow-col gap-4">
 			<div class="row-span-3 font-semibold py-8 text-lg" >
 				<h2>Читать мангу онлайн на русском!</h2>
