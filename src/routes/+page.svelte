@@ -53,31 +53,6 @@ let catalogM = [];
 </svelte:head>
 
 <section>
-	<!-- <div class="grid gap-4 z-0">
-		
-		<div class="grid grid-cols-5 gap-4 snap-x">
-			<div class="relative">
-					<img class="m-2 w-full xl:h-56 2xl:h-64 object-cover max-w-full rounded-lg" src="https://anime-fans.ru/wp-content/uploads/2021/07/Podnyatie-urovnya-v-odinochku-glava-160.jpg" alt="">
-					<a href="/manga" class="absolute bottom-0 text-white rounded m-5 flex rounded-full bg-purple-500 shadow-lg shadow-black px-3 py-1  text-sm">Поднятие уровня в одиночку</a>
-			</div>
-			<div class="relative">
-					<img class="m-2 w-full xl:h-56 2xl:h-64 object-cover max-w-full rounded-lg" src="https://kartinkin.net/uploads/posts/2022-12/thumbs/1669916116_51-kartinkin-net-p-klinok-rassekayushchii-demonov-kokushibo-k-52.jpg" alt="">
-					<a href="/manga" class="absolute bottom-0 text-white rounded m-5 flex rounded-full bg-purple-500 shadow-lg shadow-black px-3 py-1  text-sm">Клинок, рассекающий демонов</a>
-			</div>
-			<div class="relative">
-					<img class="m-2 w-full xl:h-56 2xl:h-64 object-cover max-w-full rounded-lg" src="https://media.2x2tv.ru/content/images/2021/09/02.jpg" alt="">
-					<a href="/manga" class="absolute bottom-0 text-white rounded m-5 flex rounded-full bg-purple-500 shadow-lg shadow-black px-3 py-1  text-sm">Токийские мстители</a>
-			</div>
-			<div class="relative">
-					<img class="m-2 w-full xl:h-56 2xl:h-64 object-cover max-w-full rounded-lg" src="https://sun9-65.userapi.com/impg/YYYf3GFutdOxPE5Hj82Mxdsxts19_oPZR3Z-rQ/gGQr_Q65qes.jpg?size=720x454&quality=96&sign=ce1041ca7415965ec5f5009b3771e895&type=album" alt="">
-					<a href="/manga" class="absolute bottom-0 text-white rounded m-5 flex rounded-full bg-purple-500 shadow-lg shadow-black px-3 py-1  text-sm">Невеста герцога по контракту</a>
-			</div>
-			<div class="relative">
-					<img class="m-2 w-full xl:h-56 2xl:h-64 object-cover max-w-full rounded-lg" src="https://mobimg.b-cdn.net/v3/fetch/70/709b08c1b65446423adebdf9ef541a28.jpeg" alt="">
-					<a href="/manga" class="absolute bottom-0 text-white rounded m-5 flex rounded-full bg-purple-500 shadow-lg shadow-black px-3 py-1  text-sm">Хвост феи</a>
-			</div>
-		</div>
-	</div> -->
 	<img class="w-full h-72 object-cover saturate-50 brightness-75 mt-20" src="https://pibig.info/uploads/posts/2022-11/1668883553_5-pibig-info-p-mangalib-registratsiya-oboi-5.jpg" alt="Шапка">
 </section>
 
